@@ -9,4 +9,4 @@ No `#define` in zig, so `#if defined(RLIGHTS_IMPLEMENTATION)` will always hide i
 
 Redesigned `void UpdateLightValues(Shader, Light)` to `void UpdateLightValues(Shader, Light*)`. Using new function you will pass an address of light (which makes sense) so `zig translate-c` works too.
 
-Removed `defined(RLIGHTS_IMPLEMENTATION)` so there is no need to `#define`
+Removed `#if defined(RLIGHTS_IMPLEMENTATION)` so there is no need to `#define`
